@@ -71,7 +71,7 @@ def get_acc_one_step(logits, text_lens, labels_batch):
 
 best_acc = 0
 step = 0
-for epoch in range(args.epoch):
+for epoch in range(1):
     for _, (text_batch, labels_batch) in enumerate(train_dataset):
         step = step + 1
         loss, logits, text_lens = train_one_step(text_batch, labels_batch)
